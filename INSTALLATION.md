@@ -33,6 +33,14 @@ Below are the steps to follow -
   ```
   npm run start
   ```
+
+  make build is made of below commands:
+    cp .env.local_dev .env
+    rm -rf apps/OpenSign/public/mfbuild
+    cd microfrontends/SignDocuments && npm install && npm run build
+    docker compose up --build --force-recreate
+  
+  
 You should be able to access the application from http://localhost:3000 after this.
 Create an account by signing-up and start contributing.
 
